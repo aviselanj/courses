@@ -1,5 +1,5 @@
 "use strict";
-//Greeting 
+//Greeting
 let userName = prompt("Hello, Im Avi! What's your name?");
 alert("Im glad you are here " + userName + "! Let's play a little guessing game all about me.");
 
@@ -43,7 +43,7 @@ function playGame() {
     } else {
       alert("Wrong, Avi is a proud veteran of the United States Army.");
     }
-    if (animalPrompt == "no") {
+    if (animalPrompt === "no") {
       alert("Thats correct. Avi is a cat lady");
       playerPoints++;
     } else {
@@ -57,12 +57,12 @@ function playGame() {
     }
 
   }
-  gameChoice()
+  gameChoice();
   prompt("One last question, how many years have I been studying code?");
   if (prompt < 4) {
-    alert("That is too low.")
-  } else if (propt > 4) {
-    alert("That is too high.")
+    alert("That is too low.");
+  } else if (prompt > 4) {
+    alert("That is too high.");
   } else {
     alert("Spot on!");
   }
