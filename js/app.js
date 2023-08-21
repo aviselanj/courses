@@ -64,4 +64,3 @@ function playGame() {
     console.log(playerPoints);
 
     playerPointsPara.innerHTML = playerPoints;
-}
