@@ -74,7 +74,32 @@ function playGame() {
   }
 
   yearsCoding();
+  function myFavFoods() {
+    let choiceArr = ['sushi', 'steak', 'pho', 'crab bisque', 'gumbo'];
 
+    for (let i = 0; i < myFavFoods.length; i++) {
+      prompt('Can you guess my favorite foods?');
+      let guess = choiceArr.toLowerCase();
+
+      for (let j = 0; j < myFavFoods.length; j++){
+        if (guess === myFavFoods[j]) {
+          alert('Congrats you got it right!!!');
+          playerPoints++;
+          i = 6;
+          break;
+        }
+      }
+      if (i !==6){
+        alert('Sorry wrong answer, try again');
+      }
+    }
+  }
+
+  myFavFoods();
+
+  alert('My favorite foods are: sushi, steak, pho, crab bisque and gumbo');
+
+  alert('Good Job!... You got ' + playerPoints + ' correct answers!');
 
   console.log(playerPoints);
 
