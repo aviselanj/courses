@@ -49,7 +49,31 @@ function playGame() {
   }
   gameChoice();
   prompt("One last question, how many years have I been interested coding?");
+  let number;
+  function yearsCoding() {
+    let counter = 1;
+    if (counter === 5) {
+      alert('Sorry you run out of guesses');
+    }
+    while (counter < 5 && number !== 4) {
+      let number = parseInt(prompt("One last question, how many years have I been interested coding?")
+      );
+      if (number > 4) {
+        alert('You guessed too high! Guess again');
+        counter++;
+      } else if (number < 4) {
+        alert('You guessed too low! Guess again');
+        counter++;
+      }
+    }
+    if (number === 4) {
+      alert('That is correct! My favorite number is 33!');
+      playerPoints++;
+      counter = 5;
+    }
+  }
 
+  yearsCoding();
 
 
   console.log(playerPoints);
