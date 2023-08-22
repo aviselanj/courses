@@ -51,7 +51,7 @@ function playGame() {
   prompt("One last question, how many years have I been interested coding?");
   let number;
   function yearsCoding() {
-    let counter = 1;
+    let counter = 0;
     if (counter === 5) {
       alert('Sorry you run out of guesses');
     }
@@ -67,30 +67,30 @@ function playGame() {
       }
     }
     if (number === 4) {
-      alert('That is correct! My favorite number is 33!');
+      alert('That is correct!');
       playerPoints++;
-      counter = 5;
     }
   }
 
   yearsCoding();
+  let choiceArr = ['sushi', 'steak', 'pho', 'crab bisque', 'gumbo'];
+
   function myFavFoods() {
-    let choiceArr = ['sushi', 'steak', 'pho', 'crab bisque', 'gumbo'];
+    let foodPrompt = prompt('Can you guess my favorite foods?');
 
-    for (let i = 0; i < myFavFoods.length; i++) {
-      prompt('Can you guess my favorite foods?');
-      let guess = choiceArr.toLowerCase();
 
-      for (let j = 0; j < myFavFoods.length; j++){
-        if (guess === myFavFoods[j]) {
-          alert('Congrats you got it right!!!');
-          playerPoints++;
-          i = 6;
-          break;
-        }
+    for (let i = 0; i < choiceArr.length; i++) {
+      let count = 0;
+      if (foodPrompt.toLowerCase() === choiceArr[i]) {
+        alert('Congrats you got it right!!!');
+        playerPoints++;
+      }else{
+        alert("Yuck, I am not interested in " + foodPrompt + "at all. Guess again.");
+        count++;
       }
-      if (i !==6){
-        alert('Sorry wrong answer, try again');
+      if(count >= 5){
+        alert("All out of guesses!");
+        alert("My favorite foods are sushi, steak, pho, crab bisque, and gumbo!");
       }
     }
   }
@@ -105,7 +105,7 @@ function playGame() {
 
   playerPointsPara.innerHTML = playerPoints;
 }
-// Display the user's answers and update score
+
 
 
 
